@@ -42,7 +42,15 @@ const coinprice=
     }
   ];
 let rowinsert=1;
+const deletetablecoin = document.getElementsByTagName("tr");
+const n= deletetablecoin.length;
+console.log(n);
 const gettablecoin = document.getElementById("tablecoin");
+let i=1;
+for(i=1;i<n;i++)
+{
+    gettablecoin.deleteRow(1);
+}
 coinprice.forEach((item)=>{
     const tr=gettablecoin.insertRow(rowinsert);
 const td0=tr.insertCell(0);
